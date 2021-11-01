@@ -139,12 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="PhysCalc.cpp" />
+    <ClCompile Include="Calculators.cpp" />
+    <ClCompile Include="EnergyCalc.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="SpeedCalculator.cpp" />
     <ClCompile Include="StartMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PhysCalc.h" />
+    <ClInclude Include="Calculators.h" />
+    <ClInclude Include="Main.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,12 +1,13 @@
 #include <iostream>
 
-#include "PhysCalc.h"
+#include "Main.h"
 
 using namespace std;
 
 typedef enum {
 	Placeholder,
 	Speed,
+	Energy,
 	Exit
 } input_options;
 
@@ -18,7 +19,8 @@ void startmenu()
 	while(is_running == true) {
 		cout << "\nOptions:" << endl
 			<< "    1. Calculate speed" << endl
-			<< "    2. Exit" << endl;
+			<< "    2. Calculate energy" << endl
+			<< "    3. Exit" << endl;
 
 		cin.clear();
 	
@@ -31,8 +33,12 @@ void startmenu()
 			cout << endl << "Opening the speed calculator..." << endl << endl;
 			speed_calc();
 			break;
+		case Energy:
+			cout << endl << "Opening the energy calculator..." << endl << endl;
+			calc_energy();
+			break;
 		case Exit:
-			cout << "Quitting..." << endl;
+			cout << "Exiting..." << endl;
 			is_running = false;
 			break;
 		default:
@@ -40,4 +46,6 @@ void startmenu()
 			break;
 		}
 	}
+
+	return;
 }

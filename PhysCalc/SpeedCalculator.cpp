@@ -1,14 +1,9 @@
 ﻿#include <iostream>
-#include <regex>
 #include <string>
 
-#include "PhysCalc.h"
+#include "Calculators.h"
 
 using namespace std;
-
-bool is_integer(const string s) {
-	return regex_match(s, regex("[(-|+)|][0-9]+"));
-}
 
 long double calculate(long double dis, long double time)
 {
@@ -30,7 +25,6 @@ void speed_calc()
 		if (is_integer(input))
 		{
 			distance = stol(input);
-			break;
 		}
 		else
 		{
@@ -56,4 +50,6 @@ void speed_calc()
 	}
 
 	cout << "\nThe result is: " << calculate(distance, time) << "!" << endl;
+
+	return;
 }
