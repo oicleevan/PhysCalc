@@ -10,7 +10,9 @@ typedef enum
 {
 	Placeholder,
 	KE,
-	GPE
+	GPE,
+	EPE,
+	Exit
 } energy_types;
 
 long double ke_calc (long double m, long double v)
@@ -118,7 +120,8 @@ void calc_energy()
 		cout << "What energy do you want to calculate?" << endl;
 		cout << "    1. Kinetic Energy" << endl
 			<< "    2. Gravitational Potential Energy" << endl
-			<< "    3. Exit" << endl;
+			<< "    3. Elastic Potential Energy" << endl
+			<< "    4. Exit" << endl;
 
 		int			input;
 		long double output;
@@ -128,13 +131,16 @@ void calc_energy()
 			cin >> input;
 
 			switch (input) {
-			case 1:
+			case KE:
 				output = kinetic_energy();
 				break;
-			case 2:
+			case GPE:
 				output = gpe_energy();
 				break;
-			case 3:
+			case EPE:
+				cout << "Coming soon!" << endl;
+				exit(EXIT_SUCCESS);
+			case Exit:
 				cout << "Exiting..." << endl;
 				is_running = false;
 				break;
