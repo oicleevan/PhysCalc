@@ -49,3 +49,10 @@ void startmenu()
 
 	return;
 }
+
+int main()
+{
+	startmenu();
+
+	return 0;
+}

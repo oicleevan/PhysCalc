@@ -1,5 +1,2 @@
-.vs/
-./Debug/
-./Release/
-PhysCalc/Debug/
-PhysCalc/Release/
+bin
+build

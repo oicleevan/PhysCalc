@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 
-#include "Calculators.h"
+#include "calculators.h"
 
 using namespace std;
 
